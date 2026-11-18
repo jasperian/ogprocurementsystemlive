@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Purchasing Workflow Simulator</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#172447;font:16px/1.5 system-ui,sans-serif}main{max-width:960px;margin:auto;padding:clamp(16px,4vw,40px)}header,form,section{padding:clamp(18px,4vw,28px);border-radius:16px;margin-bottom:16px}header{background:#142a54;color:white}header a{color:#c7e3ff}h1,h2,p{margin:0 0 8px}form,section{background:white;border:1px solid #d9e3f1}.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(185px,1fr));gap:14px;margin-bottom:16px}label{display:block;font-weight:650}input,select,button{font:inherit;padding:8px 12px;border-radius:8px}input,select{width:100%;margin-top:4px;border:1px solid #8294af;background:white;color:#172447}button{cursor:pointer;background:#1762ad;color:white;border:1px solid #1762ad}button.secondary{background:white;color:#1762ad}button:disabled{opacity:.55;cursor:default}.actions{display:flex;flex-wrap:wrap;gap:8px}ol{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;padding:0;list-style-position:inside}li{padding:10px;border-radius:8px;background:#eff4fa}li[aria-current]{background:#d9ebff;outline:2px solid #1762ad}li[data-done]{background:#e2f5e9}.muted{color:#495a74}#error{color:#a02020}#details{margin:12px 0}.badge{color:#174b87;font-weight:700}
+</style></head>
+<body><main>
+<header><a href="purchasing_process_flow.html">View the full process guide</a><h1>Purchasing Workflow Simulator</h1><p>Try a sample request and act as each person in the approval chain. This page does not submit anything to the procurement system.</p></header>
+<form id="scenario">
+<h2>Set up a request</h2>
+<div class="fields">
+<label>Request type<select id="kind"><option value="ca">Cash advance</option><option value="rfp">Request for Payment</option><option value="liq">Standalone liquidation</option></select></label>
+<label>Requester<select id="creator"><option>kbalejo</option><option>rmercado</option><option>ltarrayo</option></select></label>
+<label>Request amount (₱)<input id="amount" type="number" min="0.01" step="0.01" value="8500" required></label>
+<label id="linkedField" hidden>Requires liquidation<select id="linked"><option value="no">No — direct payment</option><option value="yes">Yes — create linked liquidation</option></select></label>
+</div>
+<button type="submit">Start scenario</button>
+<p id="error" role="alert"></p>
+</form>
+<section id="simulation" hidden>
+<p class="badge" id="summary"></p>
+<div aria-live="polite"><h2 id="status"></h2><p id="actor"></p></div>
+<form id="action" style="border:0;padding:0;margin:0">
+<div id="details"></div>
+<div class="actions"><button type="submit" id="next"></button><button type="button" class="secondary" id="reset">Restart scenario</button></div>
+</form>
+<ol id="steps" aria-label="Scenario steps"></ol>
+</section>
+</main><script>
+const byId = id => document.getElementById(id);
+const kind = byId('kind'), creator = byId('creator'), amount = byId('amount'), linked = byId('linked');
+const currency = new Intl.NumberFormat('en-PH', {style:'currency', currency:'PHP'});
+const threshold = 10000;
+const step = (status, actor, action, input) => ({status, actor, action, input});
+function buildFlow(type, total, requester, requiresLiquidation) {
+    const approver = requester === 'ltarrayo' ? 'TNESC Branch Manager' : 'TNE General Manager';
+    const departmentApproval = step('For Department Head Approval', 'Department Head', 'Approve request');
+    const liquidationApproval = step('For Department Head Approval', 'Department Head', 'Approve liquidation');
+    const gm = step('For GM Approval', approver, 'Approve request');
+    const gmLiquidation = step('For GM Approval', approver, 'Approve liquidation');
+    const sap = step('For SAP Document Number', 'Accounting', 'Save SAP document number', 'sap');
+    const close = step('For Accounting Completion', 'Accounting Manager', 'Complete liquidation');
+    const submit = step('Ready to submit', requester, 'Submit request');
+    if (type === 'ca') return [submit, departmentApproval,
+        step('For Release', 'Accounting Manager', 'Release cash advance'),
+        step('For Liquidation', requester, 'Submit liquidation on the same record', 'expense'),
+        liquidationApproval, sap, close];
+    if (type === 'rfp') {
+        const flow = [submit, departmentApproval, gm,
+            step('For Release', 'Accounting', 'Save SAP number and complete RFP', 'sap')];
+        if (requiresLiquidation) flow.push(
+            step('RFP Completed', requester, 'Create linked liquidation', 'expense'),
+            liquidationApproval, sap, gmLiquidation, close);
+        return flow;
+    }
+    return [step('Ready to submit', requester, 'Submit liquidation', 'attachment'),
+        liquidationApproval, sap, ...(total > threshold ? [gmLiquidation] : []), close];
+}
+let flow = [], index = 0, scenarioTitle = '', scenarioAmount = 0, actualAmount = null;
+function render() {
+    const current = flow[index];
+    byId('summary').textContent = scenarioTitle + ' · ' + currency.format(scenarioAmount)
+        + (actualAmount === null ? '' : ' · Actual ' + currency.format(actualAmount));
+    byId('status').textContent = current ? current.status : 'Completed';
+    byId('actor').textContent = current ? 'Action by ' + current.actor : 'All scenario steps are complete.';
+    byId('next').disabled = !current;
+    byId('next').textContent = current ? current.action : 'Completed';
+    const details = byId('details');
+    details.replaceChildren();
+    if (current?.input === 'sap') {
+        details.innerHTML = '<label>SAP document number<input id="sap" required maxlength="255" pattern=".*\\S.*" placeholder="Example: 5100000123"></label>';
+    }
+    if (current?.input === 'expense' || current?.input === 'attachment') {
+        details.innerHTML = (current.input === 'expense'
+            ? '<label>Actual amount (₱)<input id="actual" type="number" required min="0.01" step="0.01"></label>' : '')
+            + '<label>Supporting attachment<input id="attachment" type="file" required accept=".pdf,.jpg,.jpeg,.png"></label>'
+            + '<p class="muted">Choose a sample PDF, JPG, or PNG. The file stays in your browser.</p>';
+    }
+    const list = byId('steps');
+    list.replaceChildren(...flow.map((item, position) => {
+        const li = document.createElement('li');
+        li.textContent = item.action + ' · ' + item.actor;
+        if (position < index) li.dataset.done = '';
+        if (position === index) li.setAttribute('aria-current', 'step');
+        return li;
+    }));
+}
+function updateInputs() {
+    byId('linkedField').hidden = kind.value !== 'rfp';
+    byId('error').textContent = '';
+}
+kind.addEventListener('change', updateInputs);
+byId('scenario').addEventListener('submit', event => {
+    event.preventDefault();
+    const total = amount.valueAsNumber;
+    if (!Number.isFinite(total) || total <= 0 || (kind.value === 'ca' && total > threshold)) {
+        byId('error').textContent = kind.value === 'ca'
+            ? 'Enter a cash advance amount from ₱0.01 to ₱10,000.'
+            : 'Enter an amount greater than zero.';
+        return;
+    }
+    byId('error').textContent = '';
+    scenarioTitle = kind.selectedOptions[0].textContent + ' · ' + creator.value;
+    scenarioAmount = total;
+    actualAmount = null;
+    flow = buildFlow(kind.value, total, creator.value, linked.value === 'yes');
+    index = 0;
+    byId('simulation').hidden = false;
+    render();
+    byId('status').scrollIntoView({block:'nearest'});
+});
+byId('action').addEventListener('submit', event => {
+    event.preventDefault();
+    if (!flow[index]) return;
+    const attachment = byId('attachment');
+    if (attachment && !/\.(pdf|jpe?g|png)$/i.test(attachment.files[0]?.name || '')) {
+        attachment.setCustomValidity('Choose a PDF, JPG, or PNG file.');
+        attachment.reportValidity();
+        attachment.addEventListener('change', () => attachment.setCustomValidity(''), {once:true});
+        return;
+    }
+    if (byId('actual')) actualAmount = byId('actual').valueAsNumber;
+    index += 1;
+    render();
+});
+byId('reset').addEventListener('click', () => { index = 0; actualAmount = null; render(); });
+</script></body></html>

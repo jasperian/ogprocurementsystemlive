@@ -1,0 +1,84 @@
+.accredited-suppliers-page .page-header-title h2 {
+    font-weight: 700;
+    letter-spacing: 0;
+}
+.accredited-suppliers-page .supplier-subtitle {
+    color: #667085;
+    margin: 6px 0 0;
+}
+.accredited-suppliers-page .supplier-table-card {
+    border: 1px solid #e6e9ef;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(16, 24, 40, .06);
+    overflow: hidden;
+}
+.accredited-suppliers-page .card-header,
+.accredited-suppliers-page .card-footer {
+    background: #fff;
+    padding: 18px 22px;
+}
+.accredited-suppliers-page .card-header { border-bottom: 1px solid #eef1f5; }
+.accredited-suppliers-page .card-footer { border-top: 1px solid #eef1f5; font-size: 13px; }
+.accredited-suppliers-page .card-body { padding: 22px; }
+.accredited-suppliers-page .form-label { color: #475467; font-size: 13px; font-weight: 600; }
+.accredited-suppliers-page .form-control,
+.accredited-suppliers-page .form-select {
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    min-height: 40px;
+}
+.accredited-suppliers-page .form-control:focus,
+.accredited-suppliers-page .form-select:focus {
+    border-color: #1677ff;
+    box-shadow: 0 0 0 .2rem rgba(22, 119, 255, .12);
+}
+.accredited-suppliers-page .table { border-collapse: separate; border-spacing: 0; width: 100%; }
+.accredited-suppliers-page .table thead th {
+    background: #f8fafc;
+    border-bottom: 1px solid #e6e9ef;
+    color: #475467;
+    font-size: 12px;
+    font-weight: 700;
+    padding: 14px 18px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+.accredited-suppliers-page .table tbody td {
+    border-bottom: 1px solid #eef1f5;
+    color: #344054;
+    padding: 16px 18px;
+    vertical-align: middle;
+    overflow-wrap: anywhere;
+}
+.accredited-suppliers-page .table tbody tr:hover td { background: #f8fbff; --bs-table-accent-bg: #f8fbff; }
+.accredited-suppliers-page .supplier-name-cell { min-width: 230px; }
+.accredited-suppliers-page .supplier-name-text { display: block; font-weight: 700; line-height: 1.4; }
+.accredited-suppliers-page .supplier-meta { color: #667085; display: block; font-size: 12px; margin-top: 3px; }
+.accredited-suppliers-page .supplier-action-group { display: inline-flex; gap: 8px; }
+.accredited-suppliers-page .supplier-action-btn {
+    align-items: center;
+    background: #fff;
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    color: #475467;
+    display: inline-flex;
+    height: 36px;
+    justify-content: center;
+    width: 36px;
+    transition: border-color .2s, color .2s, box-shadow .2s;
+}
+.accredited-suppliers-page .supplier-action-btn:hover { border-color: #1677ff; color: #1677ff; box-shadow: 0 6px 16px rgba(16, 24, 40, .08); }
+.accredited-suppliers-page .supplier-action-btn.success:hover { border-color: #16a34a; color: #16a34a; }
+.accredited-suppliers-page .supplier-action-btn:focus-visible { outline: 2px solid #1677ff; outline-offset: 3px; }
+.accredited-suppliers-page .supplier-status,
+.accredited-suppliers-page .supplier-count { border-radius: 999px; display: inline-block; font-size: 12px; font-weight: 600; padding: 5px 12px; }
+.accredited-suppliers-page .status-success { background: #ecfdf3; color: #15803d; }
+.accredited-suppliers-page .status-neutral { background: #f2f4f7; color: #475467; }
+.accredited-suppliers-page .supplier-count { background: #eef6ff; color: #1677ff; }
+@media (max-width: 768px) {
+    .accredited-suppliers-page .card-body,
+    .accredited-suppliers-page .card-header,
+    .accredited-suppliers-page .card-footer { padding: 16px; }
+    .accredited-suppliers-page .table tbody td { min-width: 140px; white-space: normal; }
+    .accredited-suppliers-page .table tbody .supplier-name-cell { min-width: 210px; }
+}

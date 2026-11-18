@@ -1,0 +1,22 @@
+# Uploaded files at any depth
+upload/
+uploads/
+
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+/config/config.php
+/includes/db.php
+/public/includes/mail-config.php
+
+# Runtime logs
+*.log
+
+# Uploaded profile photos and signatures
+/public/assets/images/pfp/*
+!/public/assets/images/pfp/Default_pfp.png
+/public/assets/images/signature/
+
+# Local notification credentials
+/config/pusher-local.php

@@ -1,0 +1,561 @@
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 1
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 0
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 2
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => Manager
+    [index] => 1
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => General Manager
+    [index] => 2
+    [name] => Marius T. Miguel
+)
+Array
+(
+    [user_id] => 5
+    [username] => approver
+    [full_name] => Marius T. Miguel
+    [role] => approver
+    [department] => EO
+    [position] => General Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => VP for Accounting
+    [index] => 3
+    [name] => Jocelyn Rigor
+)
+Array
+(
+    [user_id] => 12
+    [username] => vpaccounting
+    [full_name] => Jocelyn Rigor
+    [role] => approver
+    [department] => EO
+    [position] => VP for Accounting
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => President
+    [index] => 4
+    [name] => Don Juan Miguel A. Oben
+)
+Array
+(
+    [user_id] => 13
+    [username] => President
+    [full_name] => Don Juan Miguel A. Oben
+    [role] => approver
+    [department] => EO
+    [position] => President
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => SVP for Finance and Admin
+    [index] => 5
+    [name] => Ana Maria Teresa A. Oben-Reyes
+)
+Array
+(
+    [user_id] => 14
+    [username] => SVP
+    [full_name] => Ana Maria Teresa A. Oben-Reyes
+    [role] => approver
+    [department] => EO
+    [position] => SVP for Finance and Admin
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => General Manager
+    [index] => 2
+    [name] => Marius T. Miguel
+)
+Array
+(
+    [user_id] => 5
+    [username] => approver
+    [full_name] => Marius T. Miguel
+    [role] => approver
+    [department] => EO
+    [position] => General Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => VP for Accounting
+    [index] => 3
+    [name] => Jocelyn Rigor
+)
+Array
+(
+    [user_id] => 12
+    [username] => vpaccounting
+    [full_name] => Jocelyn Rigor
+    [role] => approver
+    [department] => EO
+    [position] => VP for Accounting
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => President
+    [index] => 4
+    [name] => Don Juan Miguel A. Oben
+)
+Array
+(
+    [user_id] => 13
+    [username] => President
+    [full_name] => Don Juan Miguel A. Oben
+    [role] => approver
+    [department] => EO
+    [position] => President
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => SVP for Finance and Admin
+    [index] => 5
+    [name] => Ana Maria Teresa A. Oben-Reyes
+)
+Array
+(
+    [user_id] => 14
+    [username] => SVP
+    [full_name] => Ana Maria Teresa A. Oben-Reyes
+    [role] => approver
+    [department] => EO
+    [position] => SVP for Finance and Admin
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000379
+    [position] => Manager
+    [index] => 1
+    [name] => Pedro
+)
+Array
+(
+    [user_id] => 9
+    [username] => notertbk
+    [full_name] => Pedro
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TMR
+)
+Array
+(
+    [batch_id] => VN000379
+    [position] => General Manager
+    [index] => 2
+    [name] => Michael
+)
+Array
+(
+    [user_id] => 11
+    [username] => approvertbk
+    [full_name] => Michael
+    [role] => approver
+    [department] => EO
+    [position] => General Manager
+    [dealer] => TMR
+)
+Array
+(
+    [batch_id] => VN000379
+    [position] => Vice Chairman
+    [index] => 6
+    [name] => Vice Chairman
+)
+Array
+(
+    [user_id] => 15
+    [username] => vc
+    [full_name] => Vice Chairman
+    [role] => approver
+    [department] => EO
+    [position] => Vice Chairman
+    [dealer] => TMR
+)
+Array
+(
+    [batch_id] => VN000379
+    [position] => VP for Accounting
+    [index] => 3
+    [name] => Jocelyn Rigor
+)
+Array
+(
+    [user_id] => 12
+    [username] => vpaccounting
+    [full_name] => Jocelyn Rigor
+    [role] => approver
+    [department] => EO
+    [position] => VP for Accounting
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000379
+    [position] => President
+    [index] => 4
+    [name] => Don Juan Miguel A. Oben
+)
+Array
+(
+    [user_id] => 13
+    [username] => President
+    [full_name] => Don Juan Miguel A. Oben
+    [role] => approver
+    [department] => EO
+    [position] => President
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000379
+    [position] => SVP for Finance and Admin
+    [index] => 5
+    [name] => Ana Maria Teresa A. Oben-Reyes
+)
+Array
+(
+    [user_id] => 14
+    [username] => SVP
+    [full_name] => Ana Maria Teresa A. Oben-Reyes
+    [role] => approver
+    [department] => EO
+    [position] => SVP for Finance and Admin
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => General Manager
+    [index] => 2
+    [name] => Marius T. Miguel
+)
+Array
+(
+    [user_id] => 5
+    [username] => approver
+    [full_name] => Marius T. Miguel
+    [role] => approver
+    [department] => EO
+    [position] => General Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => VP for Accounting
+    [index] => 3
+    [name] => Jocelyn Rigor
+)
+Array
+(
+    [user_id] => 12
+    [username] => vpaccounting
+    [full_name] => Jocelyn Rigor
+    [role] => approver
+    [department] => EO
+    [position] => VP for Accounting
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000377
+    [position] => President
+    [index] => 4
+    [name] => Don Juan Miguel A. Oben
+)
+Array
+(
+    [user_id] => 13
+    [username] => President
+    [full_name] => Don Juan Miguel A. Oben
+    [role] => approver
+    [department] => EO
+    [position] => President
+    [dealer] => OG
+)
+Array
+(
+    [batch_id] => VN000382
+    [position] => Manager
+    [index] => 1
+    [name] => Catherine C. Villanueva
+)
+Array
+(
+    [user_id] => 4
+    [username] => noter
+    [full_name] => Catherine C. Villanueva
+    [role] => noter
+    [department] => PURCHASING
+    [position] => Manager
+    [dealer] => TNE
+)
+Array
+(
+    [batch] => 49
+    [position] => Manager
+    [name] => Ferdinand A. Hipolito
+    [index] => 2
+)
+Array
+(
+    [user_id] => 3
+    [username] => checker
+    [full_name] => Ferdinand A. Hipolito
+    [role] => checker
+    [department] => MIS
+    [position] => Manager
+    [dealer] => TNE
+)
