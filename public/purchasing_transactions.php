@@ -10,7 +10,7 @@ if (!$allowed) {
     http_response_code(403);
     die('You cannot view Purchasing transactions.');
 }
-include 'header.php';https://github.com/jasperian/ogprocurementsystemlive.git
+include 'header.php';
 include 'navigation.php';
 ?>
 
